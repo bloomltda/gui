@@ -109,6 +109,23 @@
       font-size: 16px;
       cursor: pointer;
     }
+    /* Botão do gatinho - play/pause */
+    #catButton {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      z-index: 20;
+    }
+
+    #catButton img {
+      width: 100%;
+      height: 100%;
+      user-select: none;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -118,13 +135,13 @@
 
   <!-- Botão -->
   <button class="messageButton" onclick="openMessage()">💌 Mensagem</button>
-<button class="messageButton" style="top: 80px;" onclick="playMusic()">🎵 Play Música</button>
+<!-- Gato botão play/pause -->
+  <div id="catButton" aria-label="Play/Pause music" role="button" tabindex="0">
+    <img id="catImg" src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyN2Rra3F2cWVmY2xuNGplNmZqbWR2YzAzY3BmcWtqdXBxZWx4dDFwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XaikVL6qbrJSJoQmCR/giphy.gif" alt="Gatinho parado" />
+  </div>
   
-  <!-- Música controlada por botão -->
-<audio id="loveSong" loop>
-  <source src="feel-it.mp3" type="audio/mpeg">
-  Seu navegador não suporta o elemento de áudio.
-</audio>
+  <!-- Música oculta -->
+  <audio id="audioPlayer" src="feel-it.mp3" loop></audio>
 
   <!-- GIF romântico -->
   <img class="gifCorner" src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyN2Rra3F2cWVmY2xuNGplNmZqbWR2YzAzY3BmcWtqdXBxZWx4dDFwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XaikVL6qbrJSJoQmCR/giphy.gif" alt="Couple Holding Hands">
