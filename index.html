@@ -118,12 +118,13 @@
 
   <!-- Botão -->
   <button class="messageButton" onclick="openMessage()">💌 Mensagem</button>
-
-  <!-- Música local (funciona se o arquivo estiver na mesma pasta) -->
-  <audio autoplay loop>
-    <source src="feel-it.mp3" type="audio/mpeg">
-    Seu navegador não suporta o elemento de áudio.
-  </audio>
+<button class="messageButton" style="top: 80px;" onclick="playMusic()">🎵 Play Música</button>
+  
+  <!-- Música controlada por botão -->
+<audio id="loveSong" loop>
+  <source src="feel-it.mp3" type="audio/mpeg">
+  Seu navegador não suporta o elemento de áudio.
+</audio>
 
   <!-- GIF romântico -->
   <img class="gifCorner" src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyN2Rra3F2cWVmY2xuNGplNmZqbWR2YzAzY3BmcWtqdXBxZWx4dDFwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XaikVL6qbrJSJoQmCR/giphy.gif" alt="Couple Holding Hands">
@@ -205,6 +206,11 @@
     function closeMessage() {
       document.getElementById("messageModal").style.display = "none";
     }
+    // Música
+function playMusic() {
+  const audio = document.getElementById("loveSong");
+  audio.play();
+}
   </script>
 </body>
 </html>
